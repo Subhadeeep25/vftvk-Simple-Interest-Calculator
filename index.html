@@ -1,16 +1,37 @@
 <html>
-    <head>
+  <head>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
-</html>
+    Amount <input type="number" id="principal" /> <br />
+    Interes Rate
+    <input
+      type="range"
+      min="1"
+      max="21"
+      value="1"
+      id="rate"
+      oninput="setup()"
+    /><span id="rt"> 1</span>
+    <br />
+    No. of Years
+    <select name="years" id="lang">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <br />
+    <br />
+    <button onclick="computeint()" id="compute">Compute Interest</button><br />
+    <p>
+      If you deposit <span id="amt">00</span>,<br />
+      at an interest rate of <span id="intr">00</span>%,<br />
+      you'll receive an amount of <span id="tot">00</span>,<br />
+      in year <span id="yr">00</span><br />
+    </p>
+  </body>
